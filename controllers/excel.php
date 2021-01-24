@@ -467,6 +467,63 @@ class excel extends Controller
                 'Date' => 'string',
             );
             $query = "SELECT * FROM poll_industry_education_stat_votes";
+        } else if($type == "linc_students") {
+            $file = $this->model->export_file_name = "linc_students_votes" . date("Y-m-d H:m:i") . ".xlsx";
+            $header = $this->model->export_header = array(
+                'ID' => 'string',
+                '1.1 LINC+사업 프로그램 내용에 대해 알고 있다.' => 'string',
+                '1.2 LINC+사업 프로그램은 학생 역량 강화에 도움이 된다고 생각한다.' => 'string',
+                '1.3 LINC+사업 프로그램은 학생들의 실무에 실질적인 도움이 된다고 생각한다.' => 'string',
+                '1.4 LINC+사업 프로그램 협약반의 협약산업체에 대해 만족하고 있다.' => 'string',
+                '2.1 대학은 산학협력에 적합환 환경(대학 내부 교원, 협약 산업체 강사 등 인력, 시설/장비 등 인프라)을 구축, 운영하고 있다.' => 'string',
+                '2.2 대학의 LINC+관계자는 LINC+사업 수행을 위한 충분한 지식을 보유하고 있다.' => 'string',
+                '2.3 대학은 다양한 교육과정 운영을 위해 산업체와의 다양한 교류 및 활동을 위한 노력을 하고 있다.' => 'string',
+                '2.4 협약반의 협약산업체 담당자들은 LINC+ 사업 수행을 위한 충분한 지식과 전문성을 보유하고 있다.' => 'string',
+                '3.1 대학은 산업체와 함께 학생 선발과정을 적절하게 운영했다.' => 'string',
+                '3.2 LINC+사업단은 현재 협약기업체의 요구를 반영한 사회맞춤형 교육프로그램을 수행하고 있다.' => 'string',
+                '3.3 LINC+사업 프로그램 운영 시 산업체 인사 강의 확대, 현장실습 등 현장중심교육 강화, 산업체 인사 멘토링 등 산업체의 교육 참여가 강화 되었다. ' => 'string',
+                '3.4 LINC+사업 프로그램을 알리기 위한 소속 대학의 노력 및 홍보 등은 적절하다.' => 'string',
+                '4.1 전공 교육과정의 내용은 협약반의 직무와 관련성이 높다고 생각한다.' => 'string',
+                '4.2 교양 교육과정의 내용은 협약반의 역량에 맞게 구성 및 운영되었다고 생각한다.' => 'string',
+                '4.3 해당 산업체는 교육(현장실습, 인턴십, 특강, 멘토링 등)에 적극적으로 참여했다고 생각한다.' => 'string',
+                'SQ1. 귀하의 성별은 무엇입니까? ' => 'string',
+                'SQ2. 귀하의 소속 학과(전공)는 무엇입니까?' => 'string',
+                'SQ3. 귀하는 몇 학년입니까?' => 'string',
+                'Date' => 'string',
+            );
+            $query = "SELECT * FROM poll_linc_students_votes";
+        } else if($type == "linc_industries") {
+            $file = $this->model->export_file_name = "linc_industries_votes" . date("Y-m-d H:m:i") . ".xlsx";
+            $header = $this->model->export_header = array(
+                'ID' => 'string',
+                '1.1 사회맞춤형학과 중점형의 LINC+사업 프로그램 내용에 대해 알고 있다.' => 'string',
+                '1.2 대학의 LINC+사업 프로그램 관계자들은 산업체 요구를 적극적으로 반영한다.' => 'string',
+                '1.3 LINC+사업 프로그램의 성과 및 결과에 대하여 만족한다.' => 'string',
+                '1.4 LINC+사업 프로그램 관계자들의 산학협력활동에 대한 의지 및 노력(태도)에 대하여 만족한다.' => 'string',
+                '2.1 대학은 산학협력에 적합환 환경(대학 내부 교원, 협약 산업체 강사 등 인력, 시설/장비 등 인프라)을 구축, 운영하고 있다.' => 'string',
+                '2.2 대학의 LINC+관계자는 LINC+사업 수행을 위한 충분한 지식을 보유하고 있다.' => 'string',
+                '2.3 대학은 다양한 교육과정 운영을 위해 산업체와의 다양한 교류 및 활동을 위한 노력을 하고 있다.' => 'string',
+                '2.4 대학의 LINC+사업 담당자들이 학생들과 취업, 진로 관련 지속적인 지원을 하고 있다.' => 'string',
+                '3.1 LINC+사업은 산업체와 함께 학생 선발과정을 적절하게 운영했다. ' => 'string',
+                '3.2 LINC+사업단은 현재 협약기업체의 요구를 반영한 사회맞춤형 교육프로그램을 수행하고 있다.' => 'string',
+                '3.3 LINC+사업 프로그램 운영 시 산업체 인사 강의 확대, 현장실습 등 현장중심교육 강화, 산업체 인사 멘토링 등 산업체의 교육 참여가 강화 되었다.' => 'string',
+                '3.4 LINC+사업 프로그램을 알리기 위한 소속 대학의 노력 및 홍보 등은 적절하다.' => 'string',
+                '4.1 LINC+사업 프로그램 참여 협약 당시 기대수준.' => 'string',
+                '4.2 LINC+사업 프로그램 참여 이후 현재 만족도' => 'string',
+                'Q1. 2021년 현재 협약된 약정인원을 모두 채용하지 못했다면, 그 이유는 무엇입니까?' => 'string',
+                '(기타) Q1 ' => 'string',
+                'Q2. 사회맞춤형 LINC+ 사업의 발전을 위한 건의사항이나 개선사항이 있으면 자유롭게 기술해 주십시오.' => 'string',
+                '회사소재지' => 'string',
+                '직 급' => 'string',
+                '성별' => 'string',
+                '연 령' => 'string',
+                '업 종' => 'string',
+                '(기타) 업 종' => 'string',
+                '규 모' => 'string',
+                '협약학과(전공)' => 'string',
+                'Date' => 'string',
+            );
+            $query = "SELECT * FROM poll_linc_industries_votes";
         } else if($type == "graduated_education") {
             $file = $this->model->export_file_name = "graduated_education" . date("Y-m-d H:m:i") . ".xlsx";
             $header = $this->model->export_header = array(
