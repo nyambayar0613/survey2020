@@ -158,7 +158,7 @@
                 </label>
                 <label>
                     <input type="radio"  v-model="questions.q5_5" value="출판/영상, 방송통신 및 정보서비스(IT)업">
-                    <div class="box4">
+                    <div class="box4" style="width: 330px">
                         <span><b>8)</b> 출판/영상, 방송통신 및 정보서비스(IT)업</span>
                     </div>
                 </label>
@@ -176,13 +176,13 @@
                 </label>
                 <label>
                     <input type="radio"  v-model="questions.q5_5" value="사업서비스업(여행사, 경비업체 등)">
-                    <div class="box4">
+                    <div class="box4" style="width: 300px">
                         <span><b>11)</b> 사업서비스업(여행사, 경비업체 등)</span>
                     </div>
                 </label>
                 <label>
                     <input type="radio"  v-model="questions.q5_5" value="공공행정, 국방, 사회보장">
-                    <div class="box4">
+                    <div class="box4" style="width: 250px">
                         <span><b>12)</b> 공공행정, 국방, 사회보장</span>
                     </div>
                 </label>
@@ -194,19 +194,19 @@
                 </label>
                 <label>
                     <input type="radio"  v-model="questions.q5_5" value="보건(의료) 및 사회복지(시설)사업">
-                    <div class="box4">
+                    <div class="box4" style="width: 300px">
                         <span><b>14)</b> 보건(의료) 및 사회복지(시설)사업</span>
                     </div>
                 </label>
                 <label>
                     <input type="radio"  v-model="questions.q5_5" value="예술, 스포츠 및 여가관련">
-                    <div class="box4">
+                    <div class="box4" style="width: 260px">
                         <span><b>15)</b> 예술, 스포츠 및 여가관련</span>
                     </div>
                 </label>
                 <label>
                     <input type="radio"  v-model="questions.q5_5" value="개인 서비스업(미용관련업 포함)">
-                    <div class="box4">
+                    <div class="box4" style="width: 300px">
                         <span><b>16)</b> 개인 서비스업(미용관련업 포함)</span>
                     </div>
                 </label>

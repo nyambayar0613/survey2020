@@ -160,7 +160,7 @@
                 </label>
                 <label>
                     <input type="radio" v-model="questions.q4_3" value="바이오동물산업" />
-                    <div class=" box3">
+                    <div class=" box3" style="width: 250px;">
                         <span>7) LINC+사업 참여 학생의 휴학</span>
                     </div>
                 </label>
