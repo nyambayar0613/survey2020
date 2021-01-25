@@ -121,7 +121,7 @@
         </table>
         <p><b>SQ1.</b> 2021년 현재 협약된 약정인원을 모두 채용하지 못했다면, 그 이유는 무엇입니까?</p>
         <table class="table table-responsive">
-            <td style="border-top: 1px solid #fff; display: flex; flex-direction: column;">
+            <td style="border-top: 1px solid #fff; ">
                 <label>
                     <input type="radio" v-model="questions.q4_3" value="스마트팜" />
                     <div class=" box3">
